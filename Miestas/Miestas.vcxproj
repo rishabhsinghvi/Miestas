@@ -22,32 +22,32 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{3F22A429-4CF5-4CE4-BE42-10DB6EF9355A}</ProjectGuid>
     <RootNamespace>Miestas</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -619,6 +619,7 @@
     <ClInclude Include="Miestas\Renderer\Text\Font.h" />
     <ClInclude Include="Miestas\Renderer\VertexArray.h" />
     <ClInclude Include="Miestas\Renderer\VertexBuffer.h" />
+    <ClInclude Include="Miestas\UI\UIElement.h" />
     <ClInclude Include="Miestas\Utils\FastNoise.h" />
   </ItemGroup>
   <ItemGroup>
@@ -807,6 +808,7 @@
     <ClCompile Include="Miestas\Renderer\Text\Font.cpp" />
     <ClCompile Include="Miestas\Renderer\VertexArray.cpp" />
     <ClCompile Include="Miestas\Renderer\VertexBuffer.cpp" />
+    <ClCompile Include="Miestas\UI\UIElement.cpp" />
     <ClCompile Include="Miestas\Utils\FastNoise.cpp" />
   </ItemGroup>
   <ItemGroup>

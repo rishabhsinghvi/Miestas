@@ -11,26 +11,30 @@ namespace Miestas
 	{
 		struct WindowResizeEvent : public Event
 		{
-			REGISTER_TYPE(WindowResizeEvent)
-			REGISTER_CATEGORY(ApplicationEvent)
+			//REGISTER_TYPE(WindowResizeEvent);
+			//REGISTER_CATEGORY(ApplicationEvent);
 
 			unsigned int m_newWidth, m_newHeight;
 
-			WindowResizeEvent(unsigned int newWidth, unsigned int newHeight) : m_newWidth(newWidth), m_newHeight(newHeight) {  }
+			WindowResizeEvent(unsigned int newWidth, unsigned int newHeight) : 
+				REGISTER_EVENT_INFO(WindowResizeEvent, ApplicationEvent), 
+				m_newWidth(newWidth), m_newHeight(newHeight) {  }
 
-			GET_TYPE(override)
-			GET_CATEGORY(override)
+			//GET_TYPE(override)
+			//GET_CATEGORY(override)
 		};
 
 		struct WindowCloseEvent : public Event
 		{
-			REGISTER_TYPE(WindowCloseEvent)
-			REGISTER_CATEGORY(ApplicationEvent)
+			//REGISTER_TYPE(WindowCloseEvent);
+			//REGISTER_CATEGORY(ApplicationEvent);
 
-			WindowCloseEvent() {  }
+			WindowCloseEvent():
+				REGISTER_EVENT_INFO(WindowCloseEvent, ApplicationEvent)
+			{}
 
-			GET_TYPE(override)
-			GET_CATEGORY(override)
+			//GET_TYPE(override)
+			//GET_CATEGORY(override)
 		};
 	}
 }

@@ -122,7 +122,7 @@ namespace Miestas
 		{
 			// Receives transformations from the game state and applies to objects (?)
 
-			switch (event->getType())
+			switch (event->m_eventType)
 			{
 			case EventType::GameStateChangeEvent:
 			{
@@ -148,7 +148,7 @@ namespace Miestas
 
 		void Renderer::handleGameStateChangeEvent(std::shared_ptr<GameStateChangeEvent> event)
 		{
-			m_gameState = event->m_newGameState;
+			//m_gameState = event->m_newGameState;
 			MIESTAS_LOG_INFO("Renderer: Received a GameStateChangedEvent.")
 		}
 	} 

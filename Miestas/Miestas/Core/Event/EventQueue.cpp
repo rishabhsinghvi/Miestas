@@ -28,7 +28,7 @@ namespace Miestas
 
 			for (auto& event : m_eventList)
 			{
-				auto type = event->getType();
+				auto type = event->m_eventType;
 				auto observables = m_eventMap.find(type);
 
 				if (observables == m_eventMap.end())

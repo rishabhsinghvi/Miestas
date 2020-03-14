@@ -67,7 +67,7 @@ namespace Miestas
 
 		void SoundLibrary::onEvent(std::shared_ptr<Event> event)
 		{
-			switch (event->getType())
+			switch (event->m_eventType)
 			{
 			case EventType::PlaySoundEvent:
 			{

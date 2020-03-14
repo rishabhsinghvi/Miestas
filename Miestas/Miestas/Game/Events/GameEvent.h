@@ -15,13 +15,13 @@ namespace Miestas
 
 		struct GameEvent : public Event
 		{
-			REGISTER_TYPE(None)
-			REGISTER_CATEGORY(GameEvent)
-			REGISTER_GAME_STATE(None)
+			////REGISTER_TYPE(None)
+			//REGISTER_CATEGORY(GameEvent)
+			//REGISTER_GAME_STATE(None)
 
-			GET_TYPE(override)
-			GET_CATEGORY(override)
-			GET_GAME_STATE()
+			//GET_TYPE(override)
+			//GET_CATEGORY(override)
+			//GET_GAME_STATE()
 		};
 
 

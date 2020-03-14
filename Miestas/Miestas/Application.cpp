@@ -58,28 +58,23 @@ namespace Miestas
 		REGISTER_OBSERVABLE(MouseButtonPressedEvent, m_inputHandler)
 		
 		// Register Game State Change Event
-		//m_appEventQueue->registerObservable(EventType::GameStateChangeEvent, m_gameManager.get());
 
+		//REGISTER_OBSERVABLE(GameStateChangeEvent, m_gameManager)
 		REGISTER_OBSERVABLE(GameStateChangeEvent, m_inputHandler)
 		REGISTER_OBSERVABLE(GameStateChangeEvent, m_Renderer)
 
 
 		// Register Window Resize Event
 		REGISTER_OBSERVABLE_THIS(WindowResizeEvent)
-		//m_appEventQueue->registerObservable(EventType::WindowResizeEvent, this); // Don't think we really need to send events from Window to Application, but I'll keep it just in case 
 		
 		// Register Window Close Event
 		REGISTER_OBSERVABLE_THIS(WindowCloseEvent)
-		//m_appEventQueue->registerObservable(EventType::WindowCloseEvent, this);
 
 		// Register Sound Play Event
 		REGISTER_OBSERVABLE(PlaySoundEvent, m_soundLibrary)
 
-		//m_appEventQueue->registerObservable(EventType::PlaySoundEvent, m_soundLibrary.get());
-
 		// Register Sound Stop Event
 		REGISTER_OBSERVABLE(StopSoundEvent, m_soundLibrary)
-		//m_appEventQueue->registerObservable(EventType::StopSoundEvent, m_soundLibrary.get());
 		
 		m_gameManager->setGameState(GameState::MainMenu);
 		//emitEvent(std::move(std::make_shared<PlaySoundEvent>("MainMenu", true)));
@@ -107,12 +102,13 @@ namespace Miestas
 
 	void Application::onEvent(std::shared_ptr<Event> event)
 	{
-		switch (event->getType())
+		switch (event->m_eventType)
 		{
 		case EventType::WindowCloseEvent:
+		{
 			m_isRunning = false;
 			break;
-
+		}
 		case EventType::WindowResizeEvent:
 			// Do nothing
 			break;

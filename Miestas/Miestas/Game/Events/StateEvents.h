@@ -10,7 +10,7 @@ namespace Miestas
 	{
 		struct GameStateChangeEvent : public GameEvent
 		{
-			REGISTER_TYPE(GameStateChangeEvent)
+			/*REGISTER_TYPE(GameStateChangeEvent)
 			REGISTER_CATEGORY(GameEvent)
 			REGISTER_GAME_STATE(None)
 
@@ -21,7 +21,7 @@ namespace Miestas
 			GameState m_newGameState;
 
 			GameStateChangeEvent(GameState newGameState) : m_newGameState(newGameState)
-			{}
+			{}*/
 		};
 	}
 }

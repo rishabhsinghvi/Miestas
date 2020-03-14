@@ -66,7 +66,7 @@ namespace Miestas
 
 			m_gameState = gameState;
 
-			emitEvent(std::move(std::make_shared<GameStateChangeEvent>(gameState)));
+			//emitEvent(std::move(std::make_shared<GameStateChangeEvent>(gameState)));
 			
 			if (gameState == GameState::MainMenu)
 			{
