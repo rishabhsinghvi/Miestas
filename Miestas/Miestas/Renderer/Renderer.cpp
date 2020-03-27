@@ -2,6 +2,7 @@
 #include "Logger/Logger.h"
 #include "Game/Events/StateEvents.h"
 #include "Game/Events/CameraEvents.h"
+#include "AttributeLayout.h"
 
 #include "glad/glad.h"
 
@@ -88,6 +89,7 @@ namespace Miestas
 			if (scene == m_sceneList.end())
 				return;
 
+
 			auto m_viewProjectionMatrix = m_orthoCamera->getViewProjection();
 
 			if (m_gameState == GameState::MainMenu || m_gameState == GameState::Paused)
@@ -100,10 +102,8 @@ namespace Miestas
 			}
 
 
-
 			for (const auto& object : scene->second->getSceneObjects())
 			{
-
 				const auto& vertexArray = object->m_vertexArray;
 				
 				vertexArray->bind();

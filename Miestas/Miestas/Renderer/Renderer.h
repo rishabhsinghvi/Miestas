@@ -38,7 +38,7 @@ namespace Miestas
 
 			std::unordered_map<GameState, std::unique_ptr<Scene>> m_sceneList;
 
-			GameState m_gameState = GameState::None;
+			GameState m_gameState = GameState::MainMenu;
 
 
 			EventQueue* m_eventQueue;

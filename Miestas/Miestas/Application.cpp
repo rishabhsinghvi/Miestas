@@ -91,13 +91,12 @@ namespace Miestas
 			m_Window->clear(0.5f, 0.6f, 0.8f, 1.0f);
 			m_Renderer->render();
 			m_Window->update();
-		
-			// Nothing for now
 		}
 	}
 
 	void Application::close()
 	{
+		destroy();
 	}
 
 	void Application::onEvent(std::shared_ptr<Event> event)

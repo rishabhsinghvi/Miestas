@@ -13,10 +13,10 @@ using namespace Miestas::UI;
 
 int main()
 {
-	std::unique_ptr<Application> m_Application = std::make_unique<Application>();
-	m_Application->init();
+	Application m_Application;
+	m_Application.init();
 
-	m_Application->run();
+	m_Application.run();
 	
 	/*std::vector<UIElement> elements;
 
@@ -31,5 +31,5 @@ int main()
 		x.onCallback();
 	}*/
 
-	std::cin.get();
+	//std::cin.get();
 }
