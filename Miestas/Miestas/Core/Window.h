@@ -4,7 +4,7 @@
 #include<string>
 #include<unordered_map>
 
-#include "GLFW/glfw3.h"
+#include "Renderer/GLFW/glfw3.h"
 
 #include "Core/Event/Observable.h"
 #include "Core/Event/EventQueue.h"
