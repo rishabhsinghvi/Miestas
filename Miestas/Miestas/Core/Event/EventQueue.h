@@ -19,12 +19,11 @@ namespace Miestas
 			std::unordered_map<EventType, std::vector<Observable*>> m_eventMap;
 
 		public:
-			void registerObservable(EventType eventType, Observable* observable);
+			void RegisterObservable(EventType eventType, Observable* observable);
 
-			void addEventToQueue(std::shared_ptr<Event> event);
+			void AddEventToQueue(std::shared_ptr<Event> event);
 
-			void dispatchEvents();
-
+			void DispatchEvents();
 
 		};
 	}

@@ -46,7 +46,7 @@ namespace Miestas
 
 		void GameManager::emitEvent(std::shared_ptr<Event> event)
 		{
-			m_eventQueue->addEventToQueue(event);
+			m_eventQueue->AddEventToQueue(event);
 		}
 
 		void GameManager::saveGameData()

@@ -7,7 +7,6 @@
 #include "Core/Event/MouseEvents.h"
 #include "Core/KeyBindings.h"
 
-#include "stb_image/stb_image.h"
 
 namespace Miestas
 {
@@ -140,27 +139,7 @@ namespace Miestas
 			});
 			
 
-			// Testing
-			int width, height, channels;
-
-			unsigned char* pixels = stbi_load("../Miestas/Resources/Images/Cursor.png", &width, &height, &channels, 0);
-
-			if (!pixels)
-			{
-				MIESTAS_LOG_ERROR("Window: Unable to load Cursor.")
-			}
-
-			GLFWimage cursorImage;
-			cursorImage.width = width;
-			cursorImage.height = height;
-			cursorImage.pixels = pixels;
-
-			GLFWcursor* cursor = glfwCreateCursor(&cursorImage, 0, 0);
-
-			m_cursorMap.insert({ "MainMenu", cursor });
-
-			glfwSetCursor(m_Window, m_cursorMap["MainMenu"]);
-
+			
 			MIESTAS_LOG_INFO("Window: Successfully created and initialized window.")
 
 		}
@@ -194,7 +173,7 @@ namespace Miestas
 		
 		void Window::emitEvent(std::shared_ptr<Event> event)
 		{
-			m_eventQueue->addEventToQueue(event);
+			m_eventQueue->AddEventToQueue(event);
 		}
 
 

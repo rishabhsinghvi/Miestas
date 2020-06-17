@@ -90,7 +90,7 @@ namespace Miestas
 
 		void SoundLibrary::emitEvent(std::shared_ptr<Event> event)
 		{
-			m_eventQueue->addEventToQueue(std::move(event));
+			m_eventQueue->AddEventToQueue(std::move(event));
 		}
 	}
 }

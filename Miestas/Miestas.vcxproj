@@ -138,8 +138,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Miestas\Application.h" />
+    <ClInclude Include="Miestas\BaseShaderObject.h" />
     <ClInclude Include="Miestas\Core\Audio\SoundLibrary.h" />
     <ClInclude Include="Miestas\Core\Config.h" />
+    <ClInclude Include="Miestas\Core\ECS\Component.h" />
+    <ClInclude Include="Miestas\Core\ECS\ECSCommon.h" />
+    <ClInclude Include="Miestas\Core\ECS\Entity.h" />
+    <ClInclude Include="Miestas\Core\ECS\Registry.h" />
+    <ClInclude Include="Miestas\Core\ECS\TypeId.h" />
     <ClInclude Include="Miestas\Core\Event\AudioEvents.h" />
     <ClInclude Include="Miestas\Core\Event\Event.h" />
     <ClInclude Include="Miestas\Core\Event\EventQueue.h" />
@@ -154,6 +160,13 @@
     <ClInclude Include="Miestas\Core\Memory\MemUtils.h" />
     <ClInclude Include="Miestas\Core\Memory\PoolAllocator.h" />
     <ClInclude Include="Miestas\Core\Renderer\BaseBufferObject.h" />
+    <ClInclude Include="Miestas\Core\Renderer\DeviceParameters.h" />
+    <ClInclude Include="Miestas\Core\Renderer\HardwareOcclusionQuery.h" />
+    <ClInclude Include="Miestas\Core\Renderer\HardwareQuery.h" />
+    <ClInclude Include="Miestas\Core\Renderer\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="Miestas\Core\Renderer\OpenGL\OpenGLHardwareOcclusionQuery.h" />
+    <ClInclude Include="Miestas\Core\Renderer\OpenGL\OpenGLRenderContext.h" />
+    <ClInclude Include="Miestas\Core\Renderer\RenderCommon.h" />
     <ClInclude Include="Miestas\Core\Renderer\RenderContext.h" />
     <ClInclude Include="Miestas\Core\Renderer\RenderPipeline.h" />
     <ClInclude Include="Miestas\Core\Resource\Resource.h" />
@@ -604,18 +617,15 @@
     <ClInclude Include="Miestas\Core\Renderer\assimp\vector2.h" />
     <ClInclude Include="Miestas\Core\Renderer\assimp\vector3.h" />
     <ClInclude Include="Miestas\Core\Renderer\assimp\version.h" />
-    <ClInclude Include="Miestas\Core\Renderer\glad\glad.h" />
     <ClInclude Include="Miestas\Core\Renderer\GLFW\glfw3.h" />
     <ClInclude Include="Miestas\Core\Renderer\GLFW\glfw3native.h" />
-    <ClInclude Include="Miestas\Core\Renderer\KHR\khrplatform.h" />
-    <ClInclude Include="Miestas\Core\Renderer\Managers\ShaderManager.h" />
-    <ClInclude Include="Miestas\Core\Renderer\Managers\TextureManager.h" />
     <ClInclude Include="Miestas\Core\Renderer\stb_image\stb_image.h" />
     <ClInclude Include="Miestas\Core\Renderer\TerrainGenerator.h" />
     <ClInclude Include="Miestas\Core\Renderer\Text\Character.h" />
     <ClInclude Include="Miestas\Core\Renderer\Text\Font.h" />
     <ClInclude Include="Miestas\UI\UIElement.h" />
     <ClInclude Include="Miestas\Utils\FastNoise.h" />
+    <ClInclude Include="Miestas\Version.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Miestas\glm\detail\func_common.inl" />
@@ -771,7 +781,7 @@
     <None Include="shaders\TriangleTest.vs" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="glad.c" />
+    <ClCompile Include="..\..\..\..\Downloads\src\glad.c" />
     <ClCompile Include="Miestas.cpp" />
     <ClCompile Include="Miestas\Application.cpp" />
     <ClCompile Include="Miestas\Core\Audio\SoundLibrary.cpp" />
@@ -780,6 +790,8 @@
     <ClCompile Include="Miestas\Core\Memory\DefaultRawMemoryAllocator.cpp" />
     <ClCompile Include="Miestas\Core\Memory\FrameAllocator.cpp" />
     <ClCompile Include="Miestas\Core\Memory\MemUtils.cpp" />
+    <ClCompile Include="Miestas\Core\Renderer\OpenGL\OpenGLHardwareOcclusionQuery.cpp" />
+    <ClCompile Include="Miestas\Core\Renderer\OpenGL\OpenGLRenderContext.cpp" />
     <ClCompile Include="Miestas\Core\Renderer\RenderContext.cpp" />
     <ClCompile Include="Miestas\Core\Timer.cpp" />
     <ClCompile Include="Miestas\Core\Window.cpp" />
@@ -791,8 +803,6 @@
     <ClCompile Include="Miestas\imgui\imgui_demo.cpp" />
     <ClCompile Include="Miestas\imgui\imgui_draw.cpp" />
     <ClCompile Include="Miestas\imgui\imgui_widgets.cpp" />
-    <ClCompile Include="Miestas\Core\Renderer\Managers\ShaderManager.cpp" />
-    <ClCompile Include="Miestas\Core\Renderer\Managers\TextureManager.cpp" />
     <ClCompile Include="Miestas\Core\Renderer\stb_image\stb_image.cpp" />
     <ClCompile Include="Miestas\Core\Renderer\TerrainGenerator.cpp" />
     <ClCompile Include="Miestas\Core\Renderer\Text\Font.cpp" />

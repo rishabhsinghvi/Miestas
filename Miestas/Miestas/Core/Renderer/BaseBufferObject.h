@@ -23,7 +23,7 @@ namespace Miestas
 	struct BufferDescriptor
 	{
 		/// Name of Buffer for debugging
-		std::string Name;
+		const char* Name;
 
 		/// Size of the buffer object in bytes
 		uint32_t Size;
@@ -39,7 +39,13 @@ namespace Miestas
 
 	class BaseBufferObject
 	{
-		
+	private:
+		BufferDescriptor m_BufferDesc;
+
+	public:
+
+
+
 	};
 }
 

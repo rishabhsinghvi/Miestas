@@ -7,19 +7,19 @@ namespace Miestas
 {
 	namespace Core
 	{
-		void EventQueue::registerObservable(EventType eventType, Observable * observable)
+		void EventQueue::RegisterObservable(EventType eventType, Observable * observable)
 		{
 			m_eventMap[eventType].push_back(observable);
 			observable->setEventQueue(this);
 		}
 
-		void EventQueue::addEventToQueue(std::shared_ptr<Event> event)
+		void EventQueue::AddEventToQueue(std::shared_ptr<Event> event)
 		{
 			m_nextFrameEventList.push_back(std::move(event));
 		}
 
 
-		void EventQueue::dispatchEvents()
+		void EventQueue::DispatchEvents()
 		{
 			std::swap(m_eventList, m_nextFrameEventList);
 
