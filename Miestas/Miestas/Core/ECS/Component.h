@@ -18,6 +18,7 @@ namespace Miestas
 		{
 			return TypeId<BaseComponent>::GetID<T>();
 		}
+
 	};
 }
 
